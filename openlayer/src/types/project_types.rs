@@ -1,5 +1,7 @@
+use serde::{Deserialize, Serialize};
+
 // Define the struct for the response from the API
-#[derive(Deserialize, Debug)]
+#[derive(Debug, Deserialize)]
 pub struct ListProjectsResponse {
     pub items: Vec<Project>,
 }

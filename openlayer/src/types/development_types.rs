@@ -59,13 +59,8 @@ pub struct ListCommitsResponse {
     pub items: Vec<Commit>,
 }
 
-#[derive(Deserialize, Serialize, Debug)]
-pub struct CommitDetails {
-    pub message: String,
-}
-
 // Define the structure of the request body
-#[derive(Deserialize, Serialize, Debug)]
+#[derive(Deserialize, Debug)]
 pub struct CreateCommitRequest {
     pub storage_uri: String,
     pub commit: CommitDetails,

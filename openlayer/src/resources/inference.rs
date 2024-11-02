@@ -1,5 +1,4 @@
 use reqwest::{header::AUTHORIZATION, Client, Error};
-use serde::{Deserialize, Serialize};
 use crate::types::inference_types::*;
 
 pub struct Inference {
@@ -286,4 +285,4 @@ impl Inference {
 
         Ok(result.items)
     }
-};
+}

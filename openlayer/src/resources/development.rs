@@ -1,6 +1,4 @@
-use reqwest::{header::AUTHORIZATION, Client, Error, Method};
-use serde::{Deserialize, Serialize};
-use serde_json::json;
+use reqwest::{header::AUTHORIZATION, Client, Error};
 use crate::types::development_types::*;
 
 pub struct Development {
@@ -36,8 +34,7 @@ impl Development {
             archived,
         };
 
-        let request_body_json = serde_json::to_string(&request_body)
-            .map_err(|e| format!("Failed to serialize request body: {}", e))?;
+        let request_body_json = serde_json::to_string(&request_body);
 
         let response = self
             .client

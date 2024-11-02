@@ -5,7 +5,10 @@ pub mod resources {
 }
 
 pub mod types {
-    mod development_types;
-    mod project_types;
-    mod inference_types;
+    pub mod development_types;
+    pub mod project_types;
+    pub mod inference_types;
+}
+fn main() {
+    println!("Hello, world!");
 }
